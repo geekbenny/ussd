@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "prestart": "node -e \"require('./routes/ussdRoutes.js')\" || exit 1"
   },
   "author": "Benso",
   "license": "MIT",
@@ -18,11 +19,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
-  },
-
-"scripts": {
-  "prestart": "node -e \"require('./routes/ussdRoutes.js')\" || exit 1",
-  "start": "node src/app.js",
-  "postinstall": "mkdir -p src/routes && cp routes/ussdRoutes.js src/routes/ || true"
-}  
+  }
 }
