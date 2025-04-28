@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ussdRoutes = require('./routes/ussdRoutes');
+const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 const Queue = require('./Queue');
