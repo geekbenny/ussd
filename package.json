@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon app.js",
+    "dev": "nodemon src/app.js",
     "prestart": "node -e \"require('./routes/ussdRoutes.js')\" || exit 1"
   },
   "author": "Benso",
