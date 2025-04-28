@@ -4,7 +4,7 @@
   "description": "USSD Queue Management System using Node.js and MongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/app.js",
     "dev": "nodemon app.js",
     "prestart": "node -e \"require('./routes/ussdRoutes.js')\" || exit 1"
   },
