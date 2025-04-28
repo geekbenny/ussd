@@ -20,3 +20,9 @@
     "nodemon": "^3.0.0"
   }
 }
+
+"scripts": {
+  "prestart": "node -e \"require('./routes/ussdRoutes.js')\" || exit 1",
+  "start": "node src/app.js",
+  "postinstall": "mkdir -p src/routes && cp routes/ussdRoutes.js src/routes/ || true"
+}
