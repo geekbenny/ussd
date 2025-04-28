@@ -7,7 +7,6 @@ const Queue = require('./Queue');
 const connectDB = require('./config/db');
 connectDB();
 const path = require('path');
-const ussdRoutes = require(path.join(__dirname, '../routes/ussdRoutes'));
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
