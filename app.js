@@ -6,7 +6,17 @@ const Queue = require('./Queue');
 const connectDB = require('./config/db');
 connectDB();
 const path = require('path');
-const ussdRoutes = require(path.join(__dirname, '..', 'routes', 'ussdRoutes'));
+const ussdRoutesPath = path.join(__dirname, '..', 'routes', 'ussdRoutes.js');
+
+// Debugging line - will show the exact path being used
+console.log('Looking for ussdRoutes at:', ussdRoutesPath); 
+
+try {
+  const ussdRoutes = require(ussdRoutesPath);
+} catch (err) {
+  console.error('Failed to require ussdRoutes:', err);
+  process.exit(1);
+}
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
