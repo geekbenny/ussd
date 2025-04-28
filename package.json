@@ -1,0 +1,22 @@
+{
+  "name": "ussd-queue-system",
+  "version": "1.0.0",
+  "description": "USSD Queue Management System using Node.js and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Benso",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^7.5.0",
+    "ussd-menu-builder": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
